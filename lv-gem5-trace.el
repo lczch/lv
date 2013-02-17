@@ -37,7 +37,7 @@
 
 (defvar lv--gem5-sn nil
   "List of GEM5 instruction sequence numbers to select.")
-(make-local-variable 'lv--gem5-sn)
+(make-variable-buffer-local 'lv--gem5-sn)
 
 (defvar lv--gem5-sn-history nil
   "List of arguments to `lv-add-sn' so far.")

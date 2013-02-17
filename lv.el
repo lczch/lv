@@ -53,23 +53,23 @@
 
 (defvar lv--active t
   "Whether `lv-mode' is currently active on this buffer.")
-(make-local-variable 'lv--active)
+(make-variable-buffer-local 'lv--active)
 
 (defvar lv--elems nil
   "List of elements to filter/highlight.
 Each element is a cons cell with a regexp and an index to `lv-colors'.")
-(make-local-variable 'lv--elems)
+(make-variable-buffer-local 'lv--elems)
 
 (defvar lv--count 0
   "Number of elements used so far.
 This number is used by `lv-add' to uniquely assign an element of
 `lv-colors' to each element in `lv--elems'.")
-(make-local-variable 'lv--count)
+(make-variable-buffer-local 'lv--count)
 
 (defvar lv--limit nil
   "List of regexps to select which lines matching `lv--elems' must be shown.
 When empty, shows all lines matching `lv--elems'.")
-(make-local-variable 'lv--limit)
+(make-variable-buffer-local 'lv--limit)
 
 
 
@@ -150,7 +150,7 @@ all lines and unhighlights all elements."
 
 (defvar lv--re nil
   "List of regexps to select and highlight lines.")
-(make-local-variable 'lv--re)
+(make-variable-buffer-local 'lv--re)
 
 (defvar lv--re-history nil
   "List of arguments to `lv-add-re' so far.")
